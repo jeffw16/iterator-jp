@@ -1,3 +1,10 @@
+/**
+  * iterator-jp
+  * An iterator for PHP made with Java principles
+  * @author Jeffrey Wang
+  * @license Any Open Source license listed at http://opensource.org/licenses/
+*/
+
 public class Iterator {
   public $arr;
   public $index = 0;
