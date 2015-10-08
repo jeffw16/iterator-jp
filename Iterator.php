@@ -1,6 +1,6 @@
 /**
   * iterator-jp
-  * An iterator for PHP made with Java principles
+  * An iterator for PHP made with Java ListIterator principles
   * @author Jeffrey Wang
   * @license Any Open Source license listed at http://opensource.org/licenses/
 */
@@ -12,9 +12,6 @@ public class Iterator {
 	function __construct( $in_arr ) {
 		$arr = $in_arr;
 	}
-	function iterator( $in_arr ) {
-		$arr = $in_arr;
-	}
 	function hasNext() {
 		if ( sizeof ( $arr ) >= $index ) {
 			return false;
@@ -22,8 +19,20 @@ public class Iterator {
 			return true;
 		}
 	}
+	function iterator( $in_arr ) {
+		$arr = $in_arr;
+	}
 	function next() {
-		return $arr[$index++];
+		return $arr[++$index];
+	}
+	function nextIndex() {
+		return $index + 1;
+	}
+	function previous() {
+		return $arr[++$index];
+	}
+	function previousIndex() {
+		return $index - 1;
 	}
 	function remove() {
 		$arr_temp = $arr;
@@ -33,9 +42,6 @@ public class Iterator {
 		}
 		$arr = $arr_temp;
 		return $arr[$index];
-	}
-	function previous() {
-		return $arr[$index--];
 	}
 	function set( $in_set ) {
 		$set_old = $arr[$index];
