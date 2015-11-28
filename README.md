@@ -1,2 +1,2 @@
 # iterator-jp
-An implementation of PHP's iterator using Java principles.
+An implementation of Java's ListIterator in PHP.
